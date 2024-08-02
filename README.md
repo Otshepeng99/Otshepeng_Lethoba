@@ -13,6 +13,7 @@ When Projects is clicked, the screen zooms the moving element(svg) on the right 
 The "About" tab functions the same way as the "Projects" tab with the difference being that it zooms on the  "About" tab where it shows a short information about myself.
 ![Screenshot (45)](https://github.com/user-attachments/assets/33644678-0dec-4e4f-b6a2-1f3b958730d0)
 The downside about the zoom-in animation is that i have to refresh everytime i want to zoom out because i struggled to implement a zoom out functionality.
+
 The two screenshots below shows what happens when you click on "Contacts". You will be redirected to a mail application that you have on your device with my email address displayed.
 ![Screenshot (46)](https://github.com/user-attachments/assets/2eb63266-4114-4fd5-a33c-6c834fda93a0)
 
