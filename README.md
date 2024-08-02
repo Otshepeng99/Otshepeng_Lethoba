@@ -16,6 +16,5 @@ The downside about the zoom-in animation is that i have to refresh everytime i w
 The two screenshots below shows what happens when you click on "Contacts". You will be redirected to a mail application that you have on your device with my email address displayed.
 ![Screenshot (46)](https://github.com/user-attachments/assets/2eb63266-4114-4fd5-a33c-6c834fda93a0)
 ![Screenshot (47)](https://github.com/user-attachments/assets/32073e4b-0e4e-4428-ac42-9dceeed5d138)
-![Screenshot (41)](https://github.com/user-attachments/assets/468b10ef-00bc-4106-a296-a301d1fc1e3e)
-![Screenshot (43)](https://github.com/user-attachments/assets/10c6d35e-3996-4877-869b-0cd833a27a28)
+
 
