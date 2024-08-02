@@ -1,0 +1,13 @@
+<svg width="138" height="164" viewBox="0 0 138 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="AboutMeTab">
+<path id="Vector" d="M77.2593 15.2293L61.8009 0H0V143.328L20.8359 163.855H137.44V15.2293H77.2593Z" fill="url(#paint0_linear_10_259)"/>
+<text id="About" fill="#8AE6FF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="17" y="19.8636">About</tspan></text>
+<text id="AboutMe" fill="#28E0D2" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="9.5299" letter-spacing="0em"><tspan x="7" y="36.4654">Final-year BSc IT student.&#10;</tspan><tspan x="7" y="48.4654">Highly driven IT </tspan><tspan x="7" y="60.4654">professional with </tspan><tspan x="7" y="72.4654">outstanding problem-</tspan><tspan x="7" y="84.4654">solving abilities. Excels in </tspan><tspan x="7" y="96.4654">fast-paced environments </tspan><tspan x="7" y="108.465">and quickly adapts to new </tspan><tspan x="7" y="120.465">technologies.</tspan></text>
+</g>
+<defs>
+<linearGradient id="paint0_linear_10_259" x1="0.000427333" y1="81.9276" x2="137.44" y2="81.9276" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2859E0"/>
+<stop offset="1" stop-color="#0B41B7"/>
+</linearGradient>
+</defs>
+</svg>

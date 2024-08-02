@@ -1,35 +1,81 @@
-const canvas = document.getElementById('binaryCanvas');
-const ctx = canvas.getContext('2d');
+// GSAP animations for spinning elements
+gsap.to("#Outer_spinners", {
+    rotation: 360,
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    duration: 15,
+    ease: "linear"
+});
+gsap.to("#Inner_spinners", {
+    rotation: -360, // Rotate anticlockwise
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    duration: 15,
+    ease: "linear"
+});
+gsap.to("#Big_circle_1", {
+    rotation: 360,
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    duration: 15,
+    ease: "linear"
+});
+gsap.to("#Big_circle_2", {
+    rotation: -360, // Rotate anticlockwise
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    duration: 15,
+    ease: "linear"
+});
+gsap.to("#Inner_Spinner2", {
+    rotation: 360,
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    duration: 15,
+    ease: "linear"
+});
+gsap.to("#Outer_Spinner2", {
+    rotation: -360, // Rotate anticlockwise
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    duration: 15,
+    ease: "linear"
+});
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Function to zoom to a specific element
+function zoomToElement(element, callback) {
+    const rect = element.getBoundingClientRect();
+    const zoomContainer = document.getElementById('zoom-container');
 
-const binary = '01';
-const fontSize = 16;
-const columns = canvas.width / fontSize;
+    // Remove existing zoom class if any
+    zoomContainer.classList.remove('zoomed');
+    
+    // Reflow the element to ensure the transition applies
+    void zoomContainer.offsetWidth;
+    
+    // Set transform origin based on the element position
+    zoomContainer.style.transformOrigin = `${rect.left + rect.width / 2}px ${rect.top + rect.height / 2}px`;
+    zoomContainer.classList.add('zoomed');
 
-const drops = [];
-for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
+    // Execute the callback after the zoom animation completes
+    zoomContainer.addEventListener('transitionend', () => {
+        callback();
+    }, { once: true });
 }
 
-function draw() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+// Attach event listeners
+document.getElementById('about-link').addEventListener('click', (event) => {
+    event.preventDefault();
+    const leftSvgContainer = document.querySelector('.left-svg-container');
+    zoomToElement(leftSvgContainer, () => {
+        document.getElementById('about-me-tab').style.display = 'block';
+    });
+});
 
-    ctx.fillStyle = '#0F0';
-    ctx.font = fontSize + 'px arial';
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = binary[Math.floor(Math.random() * binary.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
-        }
-
-        drops[i]++;
-    }
-}
-
-setInterval(draw, 33);
+document.getElementById('projects-link').addEventListener('click', (event) => {
+    event.preventDefault();
+    const rightSvgContainer = document.querySelector('.right-svg-container');
+    zoomToElement(rightSvgContainer, () => {
+        document.getElementById('projects-tab').style.display = 'block';
+    });
+});
